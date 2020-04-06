@@ -7,10 +7,12 @@ import { Link } from "gatsby"
 import { useAppState } from "../context/AppContext"
 
 export default function App() {
-  const { dark } = useAppState()
+  const { theme } = useAppState()
 
   return (
-    <div className={`theme ${dark ? "theme--dark" : "theme--default"}`}>
+    <div
+      className={`theme ${theme === "dark" ? "theme--dark" : "theme--default"}`}
+    >
       <Layout>
         <SEO title="Home" />
 
