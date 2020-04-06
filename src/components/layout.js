@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children, themedButtonProps }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,10 +25,7 @@ const Layout = ({ children, themedButtonProps }) => {
 
   return (
     <div>
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        themeToggleButtonProps={themedButtonProps}
-      />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
@@ -48,7 +45,6 @@ const Layout = ({ children, themedButtonProps }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  themedButtonProps: PropTypes.object.isRequired,
 }
 
 export default Layout

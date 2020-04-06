@@ -2,15 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import ToggleButton from "./common/ToggleButton"
 
-const Header = ({ siteTitle, themeToggleButtonProps }) => {
+const Header = ({ siteTitle }) => {
   return (
     <header>
       <nav className="navbar ">
         <a className="navbar-brand" href="#">
-          Shrijan00003
+          {siteTitle}
         </a>
         <div className="float-right mr-2">
-          <ToggleButton {...themeToggleButtonProps} />
+          <ToggleButton />
         </div>
       </nav>
     </header>
@@ -19,7 +19,6 @@ const Header = ({ siteTitle, themeToggleButtonProps }) => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  themeToggleButtonProps: PropTypes.object.isRequired,
 }
 
 Header.defaultProps = {

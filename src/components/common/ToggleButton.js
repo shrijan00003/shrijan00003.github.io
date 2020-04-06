@@ -1,9 +1,11 @@
 import React from "react"
+import { useAppState, useAppDispatch } from "../../context/AppContext"
 
-export default function ToggleButton(props) {
-  const { dark, toggleTheme } = props
+export default function ToggleButton() {
+  const { dark } = useAppState()
+  const dispatch = useAppDispatch()
   const onToggle = () => {
-    toggleTheme()
+    dispatch({ type: "toggle-theme" })
   }
   return (
     <label className="toggle">
