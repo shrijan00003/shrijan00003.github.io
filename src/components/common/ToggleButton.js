@@ -1,18 +1,17 @@
 import React from "react"
-import { useAppState, useAppDispatch } from "../../context/AppContext"
+import useTheme from "../../hooks/useTheme"
 
 export default function ToggleButton() {
-  const { dark } = useAppState()
-  const dispatch = useAppDispatch()
+  const [theme, toggleTheme] = useTheme()
   const onToggle = () => {
-    dispatch({ type: "toggle-theme" })
+    toggleTheme()
   }
   return (
     <label className="toggle">
       <input
         type="checkbox"
         className="toggle_input"
-        checked={dark}
+        checked={theme === "dark"}
         onChange={onToggle}
       />
       <div className="toggle-control"></div>

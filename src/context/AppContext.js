@@ -1,7 +1,8 @@
 import React from "react"
+import { types } from "../constants"
 
 const initialState = {
-  dark: false,
+  theme: "default",
 }
 
 const AppStateContext = React.createContext()
@@ -9,9 +10,10 @@ const AppDispatchContext = React.createContext()
 
 function appReducer(state, action) {
   switch (action.type) {
-    case "toggle-theme": {
-      return { ...state, dark: !state.dark }
-    }
+    case types.SET_DARK_THEME:
+      return { ...state, theme: "dark" }
+    case types.SET_DEFAULT_THEME:
+      return { ...state, theme: "default" }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }
