@@ -1,6 +1,5 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "variable";
-
-.primary-color {
-  color: $primary-color;
-}
+@import "color-theme";
+@import "nav";
+@import "toggle";
