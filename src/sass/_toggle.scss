@@ -1,0 +1,48 @@
+@import "color-theme";
+
+$transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 4em;
+$height: ($width/2);
+
+.toggle {
+  overflow: hidden;
+  .toggle-control {
+    transition: $transition;
+    width: $width;
+    height: $height;
+    display: block;
+    border-radius: $height;
+    background-color: rgba(black, 0.06);
+    position: relative;
+    @include themed() {
+      border: 1px solid t($text);
+    }
+    &:after {
+      transition: $transition;
+      content: "";
+      width: $width/2;
+      height: $height;
+      display: block;
+      @include themed() {
+        background-color: t($text);
+      }
+      border-radius: 50%;
+      box-shadow: 0 1px 2px rgba(black, 0.4), 0 3px 2px rgba(black, 0.4);
+      position: absolute;
+      top: -3px;
+      left: 0;
+    }
+  }
+
+  input {
+    display: none;
+    &:checked + .toggle-control {
+      border-color: $purple;
+      background-color: $purple;
+
+      &:after {
+        left: $width/2;
+      }
+    }
+  }
+}
