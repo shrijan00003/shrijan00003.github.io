@@ -24,9 +24,8 @@ jobs:
       - name: build
         run: npm build
 
-      - name: deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./public
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
