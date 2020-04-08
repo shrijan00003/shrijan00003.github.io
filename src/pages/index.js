@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import "../sass/app.scss"
 import { AppProvider } from "../context/AppContext"

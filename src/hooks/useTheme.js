@@ -17,7 +17,7 @@ export default function useTheme() {
       setStorage(THEME_STORAGE_KEY, "default")
       dispatch({ type: types.SET_DEFAULT_THEME })
     }
-  }, [theme, THEME_STORAGE_KEY, dispatch])
+  }, [theme, THEME_STORAGE_KEY, dispatch, setStorage])
 
   useEffect(() => {
     const localTheme = getFromStorage(THEME_STORAGE_KEY)
@@ -26,7 +26,7 @@ export default function useTheme() {
     } else {
       dispatch({ type: "set-default-theme" })
     }
-  }, [THEME_STORAGE_KEY, dispatch])
+  }, [THEME_STORAGE_KEY, dispatch, getFromStorage])
 
   return [theme, toggleTheme]
 }

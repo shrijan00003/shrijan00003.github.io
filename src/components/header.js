@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header>
       <nav className="navbar ">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           {siteTitle}
         </a>
         <div className="float-right mr-2">
