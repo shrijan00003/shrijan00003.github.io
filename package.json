@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Shrijan Tripathi Portfolio page",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Gatsby Portfolio Site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Shrijan Tripathi<shrijan00003@gmail.com>",
+  "homepage":"shrijan00003.github.io",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gatsby": "^2.20.12",
