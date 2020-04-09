@@ -5,12 +5,21 @@ import {
   FaTwitter,
   FaLinkedin,
   FaFacebook,
+  FaGithub,
 } from "react-icons/fa"
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer-wrapper">
+        <a
+          href="https://github.com/shrijan00003"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-card github-wrapper"
+        >
+          <FaGithub className="social-icon" size={80} />
+        </a>
         <a
           href="https://www.linkedin.com/in/shrijan-tripathi-35294299/"
           target="_blank"
