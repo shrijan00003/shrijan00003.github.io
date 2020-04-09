@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import ToggleButton from "./common/ToggleButton"
-import Logo from "../images/logo.svg"
+import Logo from "../images/logo-nobg.svg"
 
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <nav className="navbar ">
+      <nav className="navbar">
         <a className="navbar-brand" href="/">
           <img src={Logo} alt={siteTitle} />
         </a>

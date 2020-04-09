@@ -2,7 +2,7 @@ import React from "react"
 import { types } from "../constants"
 
 const initialState = {
-  theme: "default",
+  theme: "dark",
 }
 
 const AppStateContext = React.createContext()

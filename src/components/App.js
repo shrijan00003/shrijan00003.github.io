@@ -13,7 +13,7 @@ export default function App() {
     >
       <Layout>
         <SEO title="Home" />
-        <div style={{ margin: "0 auto", padding: "1rem" }}>
+        <div style={{ margin: "0 auto" }}>
           <DefaultImage />
         </div>
       </Layout>
